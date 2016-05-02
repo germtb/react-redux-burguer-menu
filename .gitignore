@@ -1,0 +1,6 @@
+node_modules
+*.sublime-project
+*.sublime-workspace
+npm-debug.log
+.DS_store
+bundle.js.map
