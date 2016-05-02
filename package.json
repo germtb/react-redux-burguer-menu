@@ -1,0 +1,19 @@
+{
+  "name": "react-redux-burguer-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/germtb/react-redux-burguer-menu.git"
+  },
+  "author": "Gerard Moreno-Torres Bertran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/germtb/react-redux-burguer-menu/issues"
+  },
+  "homepage": "https://github.com/germtb/react-redux-burguer-menu#readme"
+}
