@@ -1,13 +1,13 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import {store} from '../store';
-import {HoverButton} from './HoverButton';
 
-export const Menu = React.createClass({
+const buttonStyle = {
+  backgroundColor: "Transparent",
+  border: "none"
+};
+
+export const HoverButton = React.createClass({
   mixins: [PureRenderMixin],
-  onClick: function() {
-    store.dispatch({type: 'SHOW'});
-  },
   getInitialState: function() {
     return {hover: false};
   },
@@ -19,8 +19,9 @@ export const Menu = React.createClass({
   },
   render: function() {
     return (
-      <HoverButton hover={require('../../img/Menu_hover.png')} normal={require('../../img/Menu.png')} onClick={this.onClick}/>
+      <button style={buttonStyle} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
+        <img src={this.state.hover ? this.props.hover : this.props.normal}/>
+      </button>
     );
   }
-});
-
+})
