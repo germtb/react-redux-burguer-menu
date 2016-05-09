@@ -20,6 +20,7 @@ export const Frame = React.createClass({
   render: function() {
     return (
       <div style={frameStyle} onClick={this.onClick}>
+        {this.props.children}
       </div>
     );
   }

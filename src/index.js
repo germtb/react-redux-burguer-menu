@@ -8,10 +8,10 @@ import {store} from './store'
 
 ReactDOM.render(
   <Provider store={store}>
-    <div>
+    <FrameContainer>
       <SideBarContainer/>
       <Menu/>
-    </div>
+    </FrameContainer>
   </Provider>,
   document.getElementById('app')
 );
