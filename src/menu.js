@@ -1,5 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import {store} from './store';
 
 const buttonStyle = {
   backgroundColor: "Transparent",
@@ -8,8 +9,8 @@ const buttonStyle = {
 
 export const Menu = React.createClass({
   mixins: [PureRenderMixin],
-  onClick: function(argument) {
-    console.log(argument);
+  onClick: function() {
+    store.dispatch({type: 'SHOW'});
   },
   getInitialState: function() {
     return {hover: false};
