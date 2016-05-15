@@ -1,6 +1,5 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import {store} from '../store';
 import {connect} from 'react-redux';
 
 const frameStyle = {
@@ -12,14 +11,9 @@ const frameStyle = {
 
 export const Frame = React.createClass({
   mixins: [PureRenderMixin],
-  onClick: function() {
-    if (this.props.show === true) {
-      store.dispatch({type: 'HIDE'});
-    }
-  },
   render: function() {
     return (
-      <div style={frameStyle} onClick={this.onClick}>
+      <div style={frameStyle}>
         {this.props.children}
       </div>
     );

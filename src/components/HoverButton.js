@@ -19,7 +19,7 @@ export const HoverButton = React.createClass({
   },
   render: function() {
     return (
-      <button style={buttonStyle} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
+      <button style={Object.assign({}, buttonStyle, this.props.style)} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
         <img src={this.state.hover ? this.props.hover : this.props.normal}/>
       </button>
     );

@@ -15,3 +15,7 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 );
+
+store.dispatch({
+	type: 'SHOW'
+});

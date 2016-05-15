@@ -23,4 +23,3 @@ export const Menu = React.createClass({
     );
   }
 });
-
