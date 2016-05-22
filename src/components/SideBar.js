@@ -34,7 +34,6 @@ const SideBar = React.createClass({
                                        normal={require('../../img/Delete-50.png')}
                                        hover={require('../../img/Delete-50_hover.png')}
                                        onClick={this.onClick}/>);
-    console.log(closeButtonStyle);
     return (
       <Motion defaultStyle={{left: -WIDTH}} style={{left: spring(left)}}>
         {interpolatingStyle =>
