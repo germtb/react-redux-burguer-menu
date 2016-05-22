@@ -39,7 +39,9 @@ const SideBar = React.createClass({
         {interpolatingStyle =>
           <div style={Object.assign({}, sideBarStyle, interpolatingStyle)}>
             {deleteButton}
-          </div>}
+            {this.props.children}
+          </div>
+        }
       </Motion>
     );
   }

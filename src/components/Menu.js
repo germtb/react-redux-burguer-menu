@@ -8,15 +8,6 @@ export const Menu = React.createClass({
   onClick: function() {
     store.dispatch({type: 'SHOW'});
   },
-  getInitialState: function() {
-    return {hover: false};
-  },
-  onMouseOver: function () {
-    this.setState({hover: true});
-  },
-  onMouseOut: function() {
-    this.setState({hover: false});
-  },
   render: function() {
     return (
       <HoverButton hover={require('../../img/Menu_hover.png')} normal={require('../../img/Menu.png')} onClick={this.onClick}/>
