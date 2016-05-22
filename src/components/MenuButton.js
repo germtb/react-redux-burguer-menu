@@ -2,6 +2,7 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {store} from '../store';
 import {HoverButton} from './HoverButton';
+import Radium from 'radium';
 
 const divStyle = {
   fontSize: '25px',
@@ -18,6 +19,7 @@ const textStyle = {
 
 };
 
+@Radium
 export class MenuButton extends React.Component {
   render() {
     return (
