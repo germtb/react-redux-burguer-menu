@@ -21,14 +21,18 @@ const closeButtonStyle = {
   float: 'right',
 };
 
-const SideBar = React.createClass({
-  mixins: [PureRenderMixin],
-  onClick: function() {
+class SideBar extends React.Component{
+  constructor(props) {
+    super(props);
+
+    this.onClick = this.onClick.bind(this);
+  }
+  onClick() {
     if (this.props.show === true) {
       store.dispatch({type: 'HIDE'});
     }
-  },
-  render: function() {
+  }
+  render() {
     const left = this.props.show ? 0 : -WIDTH;
     const deleteButton = (<HoverButton style={closeButtonStyle}
                                        normal={require('../../img/Delete-50.png')}
@@ -45,7 +49,7 @@ const SideBar = React.createClass({
       </Motion>
     );
   }
-});
+}
 
 export const SideBarContainer = connect(s => {
   return s === undefined ? {show: false} : {show: s.show};

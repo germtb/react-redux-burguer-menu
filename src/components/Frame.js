@@ -20,12 +20,11 @@ const overlay = {
   backgroundColor: 'black',
 }
 
-export const Frame = React.createClass({
-  mixins: [PureRenderMixin],
-  onClick: function () {
+export class Frame extends React.Component {
+  onClick () {
     store.dispatch({type: 'HIDE'});
-  },
-  render: function() {
+  }
+  render() {
     const opacity = this.props.show ? 0.5 : 0;
     overlay.pointerEvents = this.props.show ? '' : 'none';
     return (
@@ -37,7 +36,7 @@ export const Frame = React.createClass({
       </div>
     );
   }
-});
+}
 
 export const FrameContainer = connect(s => {
   return s === undefined ? {show: false} : {show: s.show};

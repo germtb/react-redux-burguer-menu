@@ -18,9 +18,8 @@ const textStyle = {
 
 };
 
-export const MenuButton = React.createClass({
-  mixins: [PureRenderMixin],
-  render: function() {
+export class MenuButton extends React.Component {
+  render() {
     return (
       <div style={divStyle}>
         <img style={imageStyle} src={this.props.img}/>
@@ -28,4 +27,4 @@ export const MenuButton = React.createClass({
       </div>
     );
   }
-});
+}

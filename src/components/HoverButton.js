@@ -6,22 +6,25 @@ const buttonStyle = {
   border: "none"
 };
 
-export const HoverButton = React.createClass({
-  mixins: [PureRenderMixin],
-  getInitialState: function() {
-    return {hover: false};
-  },
-  onMouseOver: function () {
+export class HoverButton extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {hover: false};
+
+    this.onMouseOver = this.onMouseOver.bind(this);
+    this.onMouseOut = this.onMouseOut.bind(this);
+  }
+  onMouseOver() {
     this.setState({hover: true});
-  },
-  onMouseOut: function() {
+  }
+  onMouseOut() {
     this.setState({hover: false});
-  },
-  render: function() {
+  }
+  render() {
     return (
       <button style={Object.assign({}, buttonStyle, this.props.style)} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
         <img src={this.state.hover ? this.props.hover : this.props.normal}/>
       </button>
     );
   }
-})
+}
